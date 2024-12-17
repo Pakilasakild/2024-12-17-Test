@@ -1,0 +1,16 @@
+input TEXT
+LET = new Collection()
+OCC = new Collection()
+
+loop I from 0 to TEXT.Length() - 1
+ LET[I] = TEXT[I]
+ loop J from 0 to TEXT.Length() - 1 
+  if LET[I] == TEXT[J] then
+   OCC[I] = OCC[I] + 1
+  end if
+ end loop
+end loop
+
+loop I from 0 to TEXT.Length() - 1
+ output LET[I] , ": " , OCC[I]
+end loop

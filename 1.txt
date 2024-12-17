@@ -1,0 +1,20 @@
+GRADES = new Collection()
+input GRADES
+C = 0
+COUNT = 0
+SUM = 0
+GRADES.resetNext()
+while GRADES.hasNext()
+ C = C + 1
+ SUM = SUM + GRADES.getNext()
+end loop
+AVERAGE = SUM / C
+GRADES.resetNext()
+while GRADES.hasNext()
+ TEMP = GRADES.getNext()
+ if TEMP > AVERAGE then
+  COUNT = COUNT + 1
+ end if
+end loop
+output "The average grade is " , AVERAGE
+output "The grades above the average" , COUNT

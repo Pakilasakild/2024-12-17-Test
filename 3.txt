@@ -1,0 +1,18 @@
+ARR = new Array(5)(5)
+NUM = 0
+input NUM
+X = 0
+Y = 0
+loop I from 0 to 4
+ loop J from 0 to 4
+  if ARR[I][J] == NUM then
+   X = I
+   Y = J
+  end if
+ end loop
+end loop
+if NOT X = 0 AND NOT Y = 0 then
+ output "Number found in row: " , X , " and column: " , Y , "."
+ else
+ output "Number not found"
+end if

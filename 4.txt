@@ -1,0 +1,26 @@
+ARR = new Array(6)
+loop I from 0 to 5
+ input ARR[I]
+end loop
+TEST = 0
+input NUM
+LOW = 0
+HIGH = ARR.length() - 1
+
+loop while LOW <= HIGH
+ 
+ MID = (LOW + HIGH) / 2
+ 
+ if NUM == ARR[MID] then
+  output "Number found at index: ", MID
+  TEST = 1
+ else if NUM < ARR[MID] then
+  HIGH = MID - 1
+ else 
+  LOW = MID + 1
+ end if
+ 
+end loop
+
+if TEST == 0 then
+ output "Number not found"

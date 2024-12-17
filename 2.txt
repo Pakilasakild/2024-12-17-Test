@@ -1,0 +1,36 @@
+LIST = new Collection()
+LLIST = new Collection()
+NUM1
+NUM2
+LS = 0
+LLS = 0
+input LIST
+input LLIST
+input NUM1
+input NUM2
+LIST.push(NUM1)
+LIST.push(NUM2)
+LLIST.push(NUM1)
+LLIST.push(NUM2)
+LIST.resetNext()
+LLIST.resetNext()
+while LIST.hasNext()
+ LS = LS + 1
+end loop
+while LLIST.hasNext()
+ LLS = LLS + 1
+end loop
+LIST.resetNext()
+LLIST.resetNext()
+loop I from 0 to LS-1
+ if LIST[I] < 50 then
+  LIST.remove(I)
+ end if
+end loop
+loop I from 0 to LLS-1
+ if LLIST[I] < 50 then
+  LLIST.remove(I)
+ end if
+end loop
+output "List: " , LIST
+output "Linked list: " , LLIST
